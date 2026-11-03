@@ -22,12 +22,12 @@
 A light switch is on or off, nothing in between. A computer is built from an enormous number of such switches, yet it stores photos, songs and bank balances. How can something that only knows 'on' and 'off' hold a number like 13? This session answers that with four lamps and four switches. It is a simplified educational model of how whole numbers are stored; real computers use the same idea with many more bits.
 
 ## B. Concept and theory
-In the decimal number 345 each digit is worth ten times the digit to its right: 3 hundreds, 4 tens, 5 ones. Binary does the same with the number 2. A *bit* is one digit that is 0 (switch off) or 1 (switch on). With four bits the places are worth 8, 4, 2 and 1 from left to right. The number is the sum of the place values of the switches that are on. So 1101 means 8 + 4 + 0 + 1 = 13. Every switch you add doubles the number of patterns, because each old pattern can now come with the new switch off or on. Four switches make 16 patterns, which count from 0 (all off) to 15 (all on). Adding one to 15 would need a fifth switch; with only four, the count wraps round to 0.
+In the decimal number 345 each digit is worth ten times the digit to its right: 3 hundreds, 4 tens, 5 ones. Binary does the same with the number 2. A *bit* is one digit that is 0 (switch off) or 1 (switch on). With four bits the places are worth 8, 4, 2 and 1 from left to right. The number is the sum of the place values of the switches that are on. So 1101 means 8 + 4 + 0 + 1 = 13. Every switch you add doubles the number of patterns, because each old pattern can now come with the new switch off or on. Four switches make 16 patterns, which count from 0 (all off) to 15 (all on). Adding one to 15 would need a fifth switch; with only four, the count wraps around to 0.
 
 | Symbol | Meaning | Unit |
 |---|---|---|
-| b_k | state of switch number k: 0 (off) or 1 (on) | no unit (a bit) |
-| 2^k | place value of switch k | no unit |
+| b_k | state of switch number k, counted from the right starting at k = 0: 0 (off) or 1 (on) | no unit (a bit) |
+| 2^k | place value of switch k (k = 0 is the rightmost switch, worth 1) | no unit |
 | n | number of switches (bits) | count |
 | N | the whole number the switches show | no unit |
 
@@ -88,6 +88,7 @@ Take every pattern you already had and ask how many ways the new switch can be s
 Each old pattern can be combined with the new switch off or on, which gives two new patterns for every old one. Four switches make 16 patterns, five make 32. So n switches make 2^n patterns, and the largest number is 2^n - 1 because the counting starts at 0.
 
 </details>
+
 **Question type B: Numerical.** Read the switches 1011 as a decimal number, and write 12 as switches. Sanity check each result.
 
 <details>
@@ -103,6 +104,7 @@ Use the place values 8, 4, 2, 1.
 1011 = 8 + 0 + 2 + 1 = 11. For 12: 8 + 4 = 12, so the pattern is 1100. Sanity check: 11 is below 15 (the largest on 4 switches) and 1100 sums back to 12.
 
 </details>
+
 **Question type C: Graph and simulation interpretation.** In the graph of lamps on against the number, how many numbers between 0 and 15 have exactly two lamps on? What is the highest point of the graph and where does it occur?
 
 <details>
@@ -118,6 +120,7 @@ Count the dots at height 2, and look for the number with every switch on.
 Six numbers have exactly two lamps on: 3, 5, 6, 9, 10 and 12. The graph is highest (4 lamps) at 15, where every switch is on, and lowest (0 lamps) at 0. The counts at heights 0 to 4 are 1, 4, 6, 4, 1.
 
 </details>
+
 **Question type D: Design and optimisation challenge.** Design: a hall has 100 seats numbered from 0 to 99. A sign should show the seat number on lamps. What is the smallest number of lamps? Name one trade-off of using more lamps than that.
 
 <details>
@@ -142,7 +145,7 @@ Score yourself with [RUBRIC.md](../../RUBRIC.md). Print the [activity sheet](act
 | Binary is a different kind of number. | It is the same number written another way. 1101 in binary and 13 in decimal are the same quantity. |
 | The digit 2 exists in binary. | Binary digits are only 0 and 1; when a place would reach 2 you carry into the next place, just as 9 + 1 carries in decimal. |
 | The leftmost switch is worth 1. | The leftmost is the biggest place (8 on four switches); the rightmost is worth 1. |
-| Counting past the largest number makes a bigger number. | Four switches cannot show 16; the count wraps to 0000, exactly like a car odometer rolling over. |
+| Counting on past 15 gives a bigger number. | Four switches cannot show 16; after 1111 the count wraps to 0000, exactly like a car odometer rolling over. |
 
 ## Glossary
 - **bit**: one binary digit: 0 (off) or 1 (on)
