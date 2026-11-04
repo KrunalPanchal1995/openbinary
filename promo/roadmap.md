@@ -2,16 +2,6 @@
 
 This is the path, not the code. Each milestone says what you learn, what you build, and how you know it works. Pick one and open a pull request. See [CONTRIBUTING.md](../CONTRIBUTING.md).
 
-## Session 5: A 4-bit multiplier
-
-**You will learn:** Multiplication as shifted additions, and an array of AND gates and adders.
-
-**You will build:** A 4 x 4 multiplier made of gates with an 8-bit product.
-
-**Checkpoint (not met by the shipped code):** All 256 input pairs match Python's product; the shipped code has no multiplier at all.
-
-**Difficulty:** intermediate
-
 ## Session 6: A saturating adder
 
 **You will learn:** Clamping instead of wrapping, as used in audio and image processing.

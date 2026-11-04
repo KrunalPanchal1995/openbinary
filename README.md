@@ -2,18 +2,18 @@
 
 [![Checks](https://github.com/KrunalPanchal1995/openbinary/actions/workflows/ci.yml/badge.svg)](https://github.com/KrunalPanchal1995/openbinary/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square) ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue?style=flat-square) [![Open in Colab](https://img.shields.io/badge/Colab-session%201-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/KrunalPanchal1995/openbinary/blob/main/sessions/session-01/lesson.ipynb) [![Live apps](https://img.shields.io/badge/live-apps-1f6feb?style=flat-square)](https://krunalpanchal1995.github.io/openbinary/)
 
-**Build an adder from logic gates and see how computers count, in four sessions.**
+**Build an adder from logic gates and see how computers count, in five sessions.**
 
 openbinary teaches how computers hold numbers as on/off switches and how a few logic gates add, subtract and decide, using only Python and a browser.
 
 - **Start from a switch.** Session 1 needs only the idea of on and off; place value is explained from scratch.
 - **See it light up.** Every session ships a slider app that runs in the browser, with labelled graphs.
 - **Prove it by trying everything.** Each checkpoint tests circuits on every input and prints PASS or FAIL against Python.
-- **Build the missing half.** The repo stops at Session 4 on purpose; the roadmap shows the path to the Target.
+- **Build the missing half.** The repo stops at Session 5 on purpose; the roadmap shows the path to the Target.
 
 [Target](#the-target) · [Who is this for](#who-is-this-for) · [Quick start](#quick-start) · [Sessions](#sessions) · [Roadmap](#roadmap) · [Contribute](#contribute) · [Explainer PDF](docs/explainer.pdf)
 
-> **This repo is incomplete on purpose.** Sessions 1 to 4 are here and fully working. The finished Target below is a preview of what the community can build next. We show you the path, not the code. Sessions 5 and up are yours.
+> **This repo is incomplete on purpose.** Sessions 1 to 5 are here and fully working. The finished Target below is a preview of what the community can build next. We show you the path, not the code. Sessions 6 and up are yours.
 
 ## The Target
 
@@ -58,7 +58,7 @@ cd openbinary
 python start.py 1
 ```
 
-`start.py` creates a private environment, installs what is needed and runs Session 1 with its checkpoint. Next: `python start.py 2`, `python start.py 3`, `python start.py 4`, or `python start.py test` to check everything. Only a checkpoint: `python start.py check 1`.
+`start.py` creates a private environment, installs what is needed and runs Session 1 with its checkpoint. Next: `python start.py 2`, `python start.py 3`, `python start.py 4`, `python start.py 5`, or `python start.py test` to check everything. Only a checkpoint: `python start.py check 1`.
 
 Five lines turn the idea of Session 1 and Session 3 into results (they work as they are): Save it as `try.py` and run it with `python start.py run try.py` (this uses the private environment, where NumPy is installed):
 
@@ -80,8 +80,9 @@ Every session also opens in your browser with sliders (no install): [live apps](
 | 2 | [Number systems, logic gates and Boolean algebra](sessions/session-02/README.md) | Level 2: mathematical engineering model | 75 min | [open](https://krunalpanchal1995.github.io/openbinary/session-02/) |
 | 3 | [Build an adder from gates and see how computers count](sessions/session-03/README.md) | Level 3: simulation and validation | 90 min | [open](https://krunalpanchal1995.github.io/openbinary/session-03/) |
 | 4 | [A carry-lookahead adder](sessions/session-04/README.md) | Level 3: simulation and validation | 90 min | [open](https://krunalpanchal1995.github.io/openbinary/session-04/) |
+| 5 | [A multiplier from gates](sessions/session-05/README.md) | Level 3: simulation and validation | 90 min | [open](https://krunalpanchal1995.github.io/openbinary/session-05/) |
 
-Each session follows the same six steps: A real-world problem, B concept and theory, C visual explanation, D interactive simulation, E worked example and experiment, F assessment and design challenge. Each ends with `checkpoint.py`, which prints `PASS` or `FAIL` against reference numbers. Session 3 contains the real-world mini-project **Build and test an 8-bit adder-subtractor**, and Session 4 the mini-project **Choose the adder for a 32-bit processor**.
+Each session follows the same six steps: A real-world problem, B concept and theory, C visual explanation, D interactive simulation, E worked example and experiment, F assessment and design challenge. Each ends with `checkpoint.py`, which prints `PASS` or `FAIL` against reference numbers. Session 3 contains the real-world mini-project **Build and test an 8-bit adder-subtractor**, Session 4 the mini-project **Choose the adder for a 32-bit processor**, and Session 5 the mini-project **Build and test an 8 x 8 multiplier**.
 
 ## Architecture
 
@@ -91,14 +92,15 @@ flowchart LR
   S2[Session 2<br/>Number systems, logic gates and Boolean algebra]
   S3[Session 3<br/>Build an adder from gates and see how computers count]
   S4[Session 4<br/>A carry-lookahead adder]
-  R[Roadmap S5+<br/>YOU build this]
+  S5[Session 5<br/>A multiplier from gates]
+  R[Roadmap S6+<br/>YOU build this]
   T((Target))
-  S1 --> S2 --> S3 --> S4 --> R --> T
+  S1 --> S2 --> S3 --> S4 --> S5 --> R --> T
 ```
 
 | Folder or file | What is inside |
 |---|---|
-| `sessions/` | four sessions: README (A-F), `lesson.py`, notebook, live app, exercises, activity sheet, checkpoint |
+| `sessions/` | five sessions: README (A-F), `lesson.py`, notebook, live app, exercises, activity sheet, checkpoint |
 | `promo/` | the Target: media, live links, and the roadmap (path only) |
 | `docs/` | `explainer.tex` and the built `explainer.pdf` |
 | `tests/` | runs every lesson and checkpoint headless |
@@ -110,7 +112,6 @@ flowchart LR
 
 | Milestone | What you will build | Difficulty |
 |---|---|---|
-| Session 5: A 4-bit multiplier | A 4 x 4 multiplier made of gates with an 8-bit product. | intermediate |
 | Session 6: A saturating adder | An 8-bit adder-subtractor that returns the nearest extreme on overflow. | intermediate |
 | Session 7: A counter that remembers | A 4-bit counter driven by clock ticks. | advanced |
 | Session 8: An ALU with flags and a decoder | An 8-bit ALU with four operations and flags, and a decoder lighting the right segments for each digit. | advanced |
