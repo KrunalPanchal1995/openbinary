@@ -1,7 +1,7 @@
 [project]
 name = "openbinary"
 version = "0.1.0"
-description = "Learn binary, logic gates and adders: build a 4-bit ALU out of gates in 3 sessions."
+description = "Learn binary, logic gates and adders: build a 4-bit ALU out of gates in 4 sessions."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

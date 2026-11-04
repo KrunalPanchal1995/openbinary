@@ -2,16 +2,6 @@
 
 This is the path, not the code. Each milestone says what you learn, what you build, and how you know it works. Pick one and open a pull request. See [CONTRIBUTING.md](../CONTRIBUTING.md).
 
-## Session 4: A carry-lookahead adder
-
-**You will learn:** How generate and propagate signals let all carries be computed in parallel.
-
-**You will build:** A 16-bit adder built in the simulator whose carries do not ripple.
-
-**Checkpoint (not met by the shipped code):** Correct on random input pairs and a carry-out depth of at most 12 gate delays at 16 bits (the shipped ripple adder needs 33).
-
-**Difficulty:** advanced
-
 ## Session 5: A 4-bit multiplier
 
 **You will learn:** Multiplication as shifted additions, and an array of AND gates and adders.
